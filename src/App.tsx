@@ -6,8 +6,7 @@ import { Navbar } from './components/Navbar'
 import { SectionLeft } from './components/SectionLeft'
 import { SectionRight } from './components/SectionRight'
 
-import background from './img/background.jpg'
-import logo from './img/Marvel_Logo.png'
+import background1 from './img/background1.jpg'
 
 const App: React.FC = () => {
 
@@ -15,7 +14,7 @@ const App: React.FC = () => {
     <div 
     className="App"
     css={css`
-      background: url(${background});
+      background: url(${background1});
       background-size: cover;
       height: 100vh;
     `}
@@ -33,6 +32,10 @@ const App: React.FC = () => {
         font-family: 'Teko', sans-serif;
         margin: 0;
         padding: 0;
+        }
+
+        body {
+          background: #000;
         }
 
      `} />
