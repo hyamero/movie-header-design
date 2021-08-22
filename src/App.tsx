@@ -2,13 +2,12 @@
 import { css, jsx, Global } from '@emotion/react'
 import React, { useState } from 'react'
 
-import background from './img/background.jpg'
-import titlecard from './img/title-card.jpg'
-import logo from './img/Marvel_Logo.png'
-import scene0 from './img/scene0.jpg'
-import scene1 from './img/scene1.jpg'
-import scene2 from './img/scene2.jpg'
+import { Navbar } from './components/Navbar'
+import { SectionLeft } from './components/SectionLeft'
+import { SectionRight } from './components/SectionRight'
 
+import background from './img/background.jpg'
+import logo from './img/Marvel_Logo.png'
 
 const App: React.FC = () => {
 
@@ -16,16 +15,24 @@ const App: React.FC = () => {
     <div 
     className="App"
     css={css`
-      
+      background: url(${background});
+      background-size: cover;
+      height: 100vh;
     `}
     >
-     <span></span>
+     <Navbar />
+     <div className="flex-section">
+     <SectionLeft />
+     <SectionRight />
+     </div>
      <Global 
      styles={css`
         @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
 
         * {
         font-family: 'Teko', sans-serif;
+        margin: 0;
+        padding: 0;
         }
 
      `} />
